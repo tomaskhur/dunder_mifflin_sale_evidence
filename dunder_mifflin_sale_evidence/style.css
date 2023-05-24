@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+html{
+    background-color: #4E4BFF;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat" , sans-serif;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #3E47F4;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+.sidebar.open{
+    width: 250px;
+}
+.logo-image{
+    position: relative;
+    width: 40%;
+    margin-top: 8rem;
+    right: 8.5rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo-image{
+    opacity: 1;
+}
+
+.sidebar-icons{
+    width: 40px;
+    height: 41px;
+    color: white;
+}
+
+.sidebar .logo-details{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.sidebar .logo-details .icon{
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.sidebar .logo-details .logo_name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+    opacity: 1;
+}
+.sidebar .logo-details #btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.sidebar.open .logo-details #btn{
+    text-align: right;
+}
+.sidebar i{
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+.sidebar .nav-list{
+    margin-top: 150px;
+    height: 100%;
+}
+.sidebar li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+.sidebar li .tooltip{
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+.sidebar li:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+    display: none;
+}
+.sidebar input{
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #1d1b31;
+}
+.sidebar.open input{
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+.sidebar .bx-search{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #1d1b31;
+    color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+    background: #1d1b31;
+    color: #FFF;
+}
+.sidebar .bx-search:hover{
+    background: #FFF;
+    color: #11101d;
+}
+.sidebar li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background:#525AF5 ;
+}
+.sidebar li a:hover{
+    background: #FFF;
+}
+.sidebar li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+    transition: all 0.5s ease;
+    color: #11101D;
+}
+.sidebar li i{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+.sidebar li.profile{
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #525AF5;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.sidebar.open li.profile{
+    width: 250px;
+}
+.sidebar li .profile-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.sidebar li img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .position{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+.sidebar li.profile .position{
+    font-size: 12px;
+}
+.sidebar .profile #log_out{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #525AF5;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+}
+.sidebar.open .profile #log_out{
+    width: 50px;
+    background: none;
+}
+
+.home-section{
+    position: relative;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+.sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* MAIN SECTION */
+
+.home-section .greetings {
+    color: white;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+.home-section .daytime {
+    color: white;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+}
+
+.home-section .sales-graph-7-days{
+    border-radius: 20px;
+    height: 25rem;
+    width: 56rem;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    background-color: #525AF5;
+}
+
+.charts-graph {
+    width: 800px;
+    height: 800px;
+    margin-left: 2rem
+}
+
+.home-section .sales-flex{
+    display: flex;
+}
+
+.home-section .sales-count-14-days {
+    border-radius: 20px;
+    height: 20rem;
+    width: 27rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    background-color: #525AF5;
+}
+
+.home-section .sales-overall {
+    border-radius: 20px;
+    height: 20rem;
+    width: 27rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background-color: #525AF5;
+}
+
+.home-section .card-sales{
+    color: white;
+    margin-top: 2rem;
+}
+
+.title-card-sales {
+    font-weight: 700;
+    margin-left: 2rem;
+}
+
+.subtitle-card-sales {
+    font-weight: 400;
+    margin-left: 2rem;
+}
+
+.fa-dollar-sign {
+    margin-top: 1.5rem;
+    font-size: 6em;
+}
+.icon-card-sales-flex > .fa-basket-shopping {
+    margin-top: 1.5rem;
+    font-size: 6em;
+}
+
+.icon-card-sales-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overall {
+    margin-top: 4rem;
+    text-align: center;
+    color: #12EB90;
+}
+
+.info-panel {
+    position: relative;
+    width: 27rem;
+    background-color: #3E47F4;
+    border-radius: 20px;
+    bottom: 25rem;
+    left: 2rem;
+    height: 47rem;
+    margin-bottom: 4rem;
+}
+
+.fa-user{
+    margin-top: 3rem;
+    font-size: 6em;
+}
+
+#daily-info {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.best-seller-count-sales {
+    color: white;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#underline {
+    color: #ff2222;
+}
+
+.best-seller {
+    color: white;
+    margin-top: 2rem;
+}
+
+/** SECOND NAVBAR **/
+
+.nav-header-flex{
+    display: none;
+}
+
+.nav-header-flex {
+    display: none;
+    height: 5rem;
+    color: white;
+    background-color: #3E47F4;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-header-flex li {
+    margin: 8px 0;
+    list-style: none;
+    display: inline-block;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    font-size: 1.5em;
+}
+
+.nav-header-flex a{
+    color: #3E47F4;
+    text-decoration: none;
+    background-color: #525AF5;
+    align-items: center;
+    border-radius: 12px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav-header-flex i {
+    color: white;
+}
+
+
+@media only screen and (max-width: 588px) {
+
+    html, body {
+        overflow: scroll;
+    }
+    /** HEADER **/
+    .sidebar li .tooltip{
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .home-section {
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-header-flex {
+        display: flex;
+    }
+
+    /** GREETING**/
+
+    .greetings{
+        position: relative;
+        right: 1.5rem;
+    }
+    .daytime{
+        position: relative;
+        right: 1.5rem;
+    }
+
+    /** STAT - boxes **/
+
+    .charts-graph {
+        width: 480px;
+        margin-top: 1rem;
+        margin-left: 0.7rem;
+    }
+    .home-section .sales-graph-7-days {
+        margin: 0 auto;
+        width: 31rem;
+        height: 15rem;
+    }
+
+    .info-panel {
+        top: 2rem;
+        position: center;
+        width: 19rem;
+        height: 24rem;
+        left: 0;
+        margin-left: 3rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    .overall{
+        margin-top: 3rem;
+    }
+
+    .sales-flex {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .home-section .sales-count-14-days {
+
+        margin-left: 0;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 19rem;
+        justify-content: center;
+        height: 16rem;
+    }
+    .icon-card-sales-flex > .fa-basket-shopping{
+        font-size: 3em;
+    }
+
+    .home-section .sales-overall {
+        margin-left: 0;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 19rem;
+        height: 17rem;
+    }
+    .fa-dollar-sign {
+        font-size: 3em;
+    }
+    .fa-user {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .charts-graph {
+        width: 350px;
+    }
+    .home-section .sales-graph-7-days {
+        width: 23rem;
+        height: 12rem;
+    }
+}
+
+@media only screen and (max-width: 434px){
+    .charts-graph {
+        width: 280px;
+    }
+    .home-section .sales-graph-7-days {
+        width: 19rem;
+        height: 9rem;
+    }
+}
+
+
+
+

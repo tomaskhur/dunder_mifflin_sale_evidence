@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat" , sans-serif;
+}
+
+/************ sale **************/
+
+.add-sale-top {
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: #3E47F4;
+    width: 20rem;
+    border-radius: 20px;
+}
+
+.add-sale-top h2{
+    color: white;
+    text-align: center;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.add-new-sale {
+    margin-left: 40rem;
+    margin-top: 2rem;
+}
+
+.sale-search-bar {
+    margin-bottom: 1rem;
+}
+
+.flex-sale {
+    display: flex;
+}
+
+input[type="search"] {
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    padding-right: 5rem;
+    background-image: url("images/search-icons-283914.png");
+    background-repeat: no-repeat;
+    background-size: 7%;
+    background-position: 15rem 6px;
+}
+
+
+.search-icon i {
+    position: absolute;
+    top: 0.5rem;
+    right: 15rem;
+
+}
+.add-sale-top h2 {
+    color: white;
+}
+
+.add-new-sale a {
+    text-decoration: none;
+    color: white;
+}
+
+.sale-search-bar input[type=submit] {
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+}
+
+.search-icon {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.sale-table {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.table-scroll {
+    height: 40rem;
+    overflow-y: scroll;
+}
+
+.sale-table table{
+    border-collapse: collapse;
+
+}
+
+.sale-table th:first-child {
+    border-radius: 20px 0 0 0;
+}
+.sale-table th:last-child {
+    border-radius: 0 20px 0 0;
+}
+
+.sale-table th {
+    background-color: #525AF5;
+    height: 1rem;
+    width: 1rem;
+    color: white;
+}
+.sale-table th, td {
+    text-align: center;
+    padding: 1rem 4rem 1rem 4rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.sale-table i {
+    font-size: 1.5em;
+}
+
+.sale-table table thead tr:first-child {
+    color: white;
+    background-color: #4E4BFF;
+}
+
+.sale-table table tbody tr:nth-child(even) {
+    background-color: #3E47F4;
+}
+
+.sale-table table tbody td {
+    border-radius: 20px 20px 0 0;
+}
+
+/*********** sale ADD *************/
+
+.add-new-employee-form form {
+    width: 100%;
+}
+
+.add-new-sale-form {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    width: 40%;
+
+}
+
+.add-new-sale-form input {
+    display: block;
+    padding: 1.2rem 0 1.2rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgba(0,0,0,1);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.add-new-sale-form input:focus {
+    border-bottom: 3px solid red;
+    transition: all 0.3s ease;
+}
+
+.add-new-sale-form input[type="date"] {
+    width: 100%;
+}
+
+.edit-create-button {
+    position: relative;
+    width: 100%;
+    background-color: #3E47F4;
+    height: 3.5rem;
+    border-radius: 20px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: none;
+}
+
+.edit-create-button:hover {
+    transition-duration: 0.1s;
+    background-color: #406bf7;
+}
+
+.edit-create-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+
+.edit-create-button:active:after{
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.edit-create-button {
+    top: 1px;
+}
+
+.add-new-sale-form input[type="radio"] {
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    margin: 2rem 5rem 2rem 2rem;
+    width: 40px;
+}
+
+.add-new-sale-form input[type="text"] {
+    width: 100%;
+}
+
+.add-new-sale-form select {
+    width: 100%;
+    height: 3rem;
+    border-radius: 20px;
+    border: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem;
+}
+
+.discount_label_align label{
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.discount_label_align input{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    margin-bottom: 0.15rem;
+    margin-left: 1rem;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.add-new-sale-form label {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.add-new-sale-form textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgba(0,0,0,1);
+    height: 10rem;
+    display: block;
+    border-radius: 20px;
+    font-size: 0.9em;
+    padding: 1rem;
+    resize: none;
+    white-space: nowrap;
+}
+
+.add-new-sale-form textarea:focus {
+    border-bottom: 3px solid red;
+    transition: all 0.3s ease;
+}
+
+.add-new-sale-form h3 {
+    color: white;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.sale-table td a {
+    text-decoration: none;
+    color: white;
+}
+
+.result_not_found {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 20rem;
+}
+
+@media only screen and (max-width: 588px) {
+
+    /** HEADER **/
+    .sidebar li .tooltip{
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .home-section {
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-header-flex {
+        display: flex;
+    }
+
+    /** SALE ADD + SEARCH **/
+
+    .add-new-sale-form{
+        width: 80%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .flex-sale {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sale-search-bar {
+        margin: 0 auto;
+    }
+
+    .add-new-sale {
+        margin-left: 0;
+        margin-top: 2rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .sale-table {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 50rem;
+        margin-bottom: 3rem;
+    }
+
+    .table-scroll {
+        overflow-x: scroll;
+        overflox-y: scroll;
+    }
+}
